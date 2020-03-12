@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*DS_Store
+*Rproj
+simulations/SKAT/Simulation_Code_Example/out.50.hap-1.bin
