@@ -70,7 +70,7 @@ nGene <- nrow(refGene)
 
 posAnnotData <- snpAnnot[ ,c("marker","rsid_Hum","pos_Hum","chrom")]
 
-data_analysis = function(LB=1, UB= nGene, order = 4, cf1 = 2, cf2 = 2){
+data_analysis = function(LB=1, UB= nGene, cf1 = 2, cf2 = 2){
 for (z in LB:UB) {
   tryCatch({  
   testGene <- refGene[z, ]
@@ -112,6 +112,10 @@ for (z in LB:UB) {
       end   <- testGene$txEnd
 
       sumTable = NULL
+      
+      #### use dynamic rule to determine order
+      order = dRule(geno)$order
+      
       #### FUNCTIONAL MODELS
       ## bspline + fixed
       msgs <- NA
@@ -251,4 +255,4 @@ for (z in LB:UB) {
 }
 
 #### run the analysis
-data_analysis(LB=1)
+data_analysis(LB=1, UB=5, cf1 = 1, cf2 = 2)

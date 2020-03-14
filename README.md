@@ -135,10 +135,11 @@ The &#39;PedGFLMM\_non\_dynamic&#39; directory contains functions that were used
 ```
 analysis\_code/
 ├── README.md
-└── data\_analysis.R
+├── data\_analysis.R
+└── dynamic\_rule.R
 ```
 
-The &#39;analysis\_code&#39; directory contains a copy of the code we used to analyze the real data.
+The &#39;analysis\_code&#39; directory contains a copy of the code we used to analyze the real data. Note that a modified dynamic rule, as defined by the `dynamic_rule.R` file in this folder, was used to analyze the real data.
 
 While our complete real data set is unavailable due to consent issues, we have included our real analysis code in this GitHub repository as a model.  However, actually within the PedGFLMM R package, we provide an illustrative example of how to apply our statistical functions to real data as reformatted and imported via our Mega2 and Mega2R R package (https://cran.r-project.org/package=Mega2R), and would suggest that would be an easier way for the interested reader to apply our statistics to their own data.  Please see the PedGFLMM R package vignette for further details.
 
